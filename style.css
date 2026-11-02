@@ -206,3 +206,55 @@ ul { margin: 0 0 14px; padding: 0; list-style: none; }
 
 main { padding-bottom: 80px; }
 .roles { grid-template-columns: 1fr; max-width: 420px; }
+
+/* ===== size-down & side-by-side card on all widths ===== */
+body { font-size: 14px; line-height: 1.9; }
+.card { grid-template-columns: 240px 1fr; }
+.card-photo { padding-right: 36px; }
+.card-body { padding-left: 36px; }
+.org { margin-bottom: 16px; }
+.org-sub { font-size: clamp(11px, 1.4vw, 15px); }
+.org-main { font-size: clamp(16px, 2.3vw, 26px); }
+.title { font-size: clamp(13px, 1.7vw, 18px); }
+.name { font-size: clamp(32px, 6vw, 72px); }
+.name-en { font-size: clamp(14px, 2vw, 22px); }
+.rule { margin: 20px 0 18px; }
+.lead { font-size: 13px; }
+.sec-title { font-size: clamp(19px, 2.5vw, 26px); margin-bottom: 18px; }
+.sub { font-size: 16px; margin: 24px 0 8px; }
+.dots li, .plain li { font-size: 14px; }
+.roles li { font-size: 13px; }
+.timeline > div { grid-template-columns: 84px 1fr; padding: 8px 0; }
+.contact li { font-size: clamp(14px, 1.6vw, 16px); gap: 14px; margin-bottom: 10px; }
+.contact svg { width: 22px; height: 22px; }
+
+.lead { margin: 18px 0 0 calc(240px + 38px); }
+
+@media (max-width: 760px) {
+  .hero { padding-top: 32px; }
+  .card { grid-template-columns: 34% 1fr; }
+  .card-photo {
+    padding: 0 16px 0 0;
+    border-right: 1.5px solid var(--line);
+    border-bottom: 0;
+  }
+  .card-photo img { width: 100%; }
+  .card-body { padding: 0 0 0 16px; }
+  .org { margin-bottom: 8px; }
+  .org-sub { display: block; font-size: 10px; margin: 0; }
+  .org-main { font-size: 15px; white-space: nowrap; }
+  .title { font-size: 12px; }
+  .name { font-size: clamp(26px, 8.5vw, 48px); line-height: 1.3; }
+  .name .gap { width: .4em; }
+  .name-en { font-size: 13px; }
+  .rule { border-top-width: 1.5px; margin: 12px 0 0; }
+  .lead { margin: 20px 0 0; }
+  .lead br { display: none; }
+  .dots li, .plain li { font-size: 13.5px; }
+  body { font-size: 13.5px; }
+}
+
+/* 主要事業：項目名の下に1字下げで表示（折り返しも1字下げ） */
+.biz li { margin-bottom: 12px; }
+.biz li b { display: block; }
+.biz li span { display: block; padding-left: 1em; }
