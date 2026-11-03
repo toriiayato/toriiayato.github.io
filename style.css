@@ -268,3 +268,24 @@ body { font-size: 14px; line-height: 1.9; }
   .lead-narrow { display: block; margin: 20px 0 0; font-size: 13.5px; line-height: 1.8; }
   .rule { margin-bottom: 0; }
 }
+
+/* SNS：名前だけのボタン型リンク */
+.sns-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.sns-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  padding: 8px 20px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: .06em;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.sns-links a::after { content: "↗"; font-size: .85em; }
+.sns-links a:hover, .sns-links a:focus-visible { background: var(--ink); color: var(--paper); }
+@media (max-width: 760px) {
+  .sns-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .sns-links a { display: flex; width: 100%; justify-content: center; padding: 9px 12px; font-size: 13.5px; }
+}
