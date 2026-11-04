@@ -289,3 +289,20 @@ body { font-size: 14px; line-height: 1.9; }
   .sns-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .sns-links a { display: flex; width: 100%; justify-content: center; padding: 9px 12px; font-size: 13.5px; }
 }
+
+/* メディア・インタビュー（テキストのみ） */
+.media-list { max-width: 720px; border-top: 1px solid var(--hair); }
+.media-list li { padding: 14px 0; border-bottom: 1px solid var(--hair); }
+.media-list p { margin: 0 !important; }
+.media-src { font-size: 12.5px; color: var(--muted) !important; }
+.media-title { font-weight: 600; color: var(--ink) !important; line-height: 1.7; margin: 2px 0 4px !important; }
+.media-url { font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.media-url a { color: var(--sub); text-underline-offset: 3px; }
+
+/* note 埋め込み 2×2 */
+.note-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.note-grid .note-embed { display: block; width: 100% !important; max-width: 100% !important; border: 0; margin: 0 !important; }
+
+@media (max-width: 760px) {
+  .note-grid { grid-template-columns: 1fr; }
+}
